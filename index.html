@@ -2,36 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Create Viral AI Story Videos in Seconds</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <!-- SEO Meta Tags -->
+    <title>Create Viral AI Story Videos | StoryToon</title>
     <meta
       name="description"
-      content="Join early access to our AI video creation tool. Validate demand and collect emails."
+      content="Join the waitlist for the new AI platform that creates emotional, viral animal story videos, inspired by creators like Village Toone."
     />
     <meta
       name="keywords"
-      content="AI videos, story videos, creators, pre-launch"
+      content="AI video, story videos, animal cartoons, viral videos, creator tool"
     />
-    <!-- Open Graph for SEO -->
-    <meta
-      property="og:title"
-      content="Create Viral AI Story Videos in Seconds"
-    />
-    <meta
-      property="og:description"
-      content="You asked how I make these emotional AI videos. Now we’re building the engine for creators."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-domain.com" />
-    <!-- Bootstrap CDN for mobile-first design -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Google Analytics -->
+    <!-- Google Analytics + Meta Pixel - Add your codes here -->
+    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"
@@ -44,7 +30,7 @@
       gtag('js', new Date());
       gtag('config', 'YOUR_GA_ID');
     </script>
-    <!-- Meta Pixel -->
+    <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -72,111 +58,147 @@
       fbq('init', 'YOUR_PIXEL_ID');
       fbq('track', 'PageView');
     </script>
-    <noscript
-      ><img
-        height="1"
-        width="1"
-        style="display: none"
-        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
-    /></noscript>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- 1: Hero Section -->
-    <section class="hero bg-dark text-white text-center py-5">
-      <div class="container">
-        <h1 class="display-4">Create Viral AI Story Videos in Seconds</h1>
-        <p class="lead">
-          You asked how I make these emotional AI videos. Now we’re building the
-          engine for creators.
-        </p>
-        <a href="#email-capture" class="btn btn-primary btn-lg"
-          >Join Early Access</a
-        >
-      </div>
-    </section>
+    <div class="page-wrapper">
+      <!-- 1️⃣ Hero Section -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">
+            Create Viral AI Story Videos
+            <span class="highlight">in Seconds</span>
+          </h1>
+          <p class="hero-subtitle">
+            You asked how I make these emotional AI videos. Now we’re building
+            the engine for creators.
+          </p>
+          <a href="#signup" class="cta-button">Join Early Access</a>
+        </div>
+      </section>
 
-    <!-- 2: Email Capture -->
-    <section id="email-capture" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Sign Up for Early Access</h2>
-        <form
-          name="signup"
-          netlify
-          method="POST"
-          class="mx-auto"
-          style="max-width: 500px"
-          action="/thanks.html"
-        >
-          <input type="hidden" name="form-name" value="signup" />
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              name="name"
-              required
-            />
+      <!-- Cartoon Divider (AI Animal Style) -->
+      <div class="characters-divider">
+        <img
+          src="https://placekitten.com/1200/100"
+          alt="AI Animal Characters"
+          style="width: 100%; opacity: 0.6; border-radius: 0"
+        />
+        <!-- Replace above with actual cartoon strip graphic -->
+      </div>
+
+      <!-- 2️⃣ Email Capture + 4️⃣ Founding Creator Teaser (Combined) -->
+      <section class="signup-section" id="signup">
+        <div class="container narrow">
+          <div class="founding-badge">
+            ✨ Opening 200 Founding Creator Spots Soon ✨
           </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
+          <h2>Get Early Access</h2>
+          <p>No pricing yet. First 200 get a special founding member status.</p>
+
+          <!-- Form submits to Netlify -->
+          <form
+            name="waitlist"
+            method="POST"
+            action="/"
+            data-netlify="true"
+            class="signup-form"
+          >
+            <input type="hidden" name="form-name" value="waitlist" />
+
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="e.g., Alex Chen"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="alex@example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="video-type"
+                >What type of videos do you want to create? (Optional)</label
+              >
+              <select id="video-type" name="video-type">
+                <option value="">-- Select an idea --</option>
+                <option value="animal-stories">
+                  🐾 AI Animal Stories (like Village Toone)
+                </option>
+                <option value="kids-cartoons">🧸 Kids Cartoons</option>
+                <option value="emotional-tales">😢 Emotional Tales</option>
+                <option value="other">✨ Something else</option>
+              </select>
+            </div>
+
+            <button type="submit" class="submit-button">
+              Join the Waitlist →
+            </button>
+            <p class="form-notice">We'll notify you when we launch. No spam.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 3️⃣ Social Proof Section -->
+      <section class="social-proof">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">250M+</div>
+              <div class="stat-label">Monthly Views</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">🔥</div>
+              <div class="stat-label">Built from Real Creator Demand</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">⚙️</div>
+              <div class="stat-label">AI Platform in Development</div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="video-type" class="form-label"
-              >What type of videos do you want to create? (Optional)</label
+          <!-- Optional: Add a testimonial or reference to Village Toone -->
+          <p class="reference-note">
+            Inspired by the magic of pages like
+            <a
+              href="https://www.facebook.com/VillageToone"
+              target="_blank"
+              rel="noopener"
+              >Village Toone</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- 5️⃣ Simple Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="mailto:hello@storytoon.app"
+              >Contact: hello@storytoon.app</a
             >
-            <input
-              type="text"
-              class="form-control"
-              id="video-type"
-              name="video-type"
-            />
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-      </div>
-    </section>
+          <div class="copyright">
+            © 2024 StoryToon (Coming Soon). All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
 
-    <!-- 3: Social Proof Section -->
-    <section class="bg-light py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Why Join?</h2>
-        <p>250M+ monthly views</p>
-        <p>Built from real creator demand</p>
-        <p>AI platform in development</p>
-      </div>
-    </section>
-
-    <!-- 4: Founding Creator Teaser -->
-    <section class="py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Opening 200 Founding Creator Spots Soon</h2>
-        <p>No pricing yet — get in early!</p>
-      </div>
-    </section>
-
-    <!-- 5: Simple Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-      <div class="container">
-        <a href="/terms.html" class="text-white">Terms</a> |
-        <a href="/privacy.html" class="text-white">Privacy</a> |
-        <a href="mailto:contact@example.com" class="text-white">Contact</a>
-      </div>
-    </footer>
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Include the script for any front-end interactions -->
     <script src="script.js"></script>
   </body>
 </html>
